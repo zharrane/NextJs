@@ -1,6 +1,5 @@
 import Article from "../components/Article"
 import Meta from "../components/Meta"
-import { SERVER } from "../config"
 const Home = ({ articles }) => {
   return (
     <div>
@@ -12,9 +11,11 @@ const Home = ({ articles }) => {
 export default Home
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${SERVER}/api/articles`)
-  const articles = await res.json()
-
+  let articles = []
+  // const res = await fetch(`${SERVER}/api/articles`)
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/`)
+  const response = await res.json()
+  articles = response ? response : []
   return {
     props: {
       articles,

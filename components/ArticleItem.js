@@ -1,5 +1,5 @@
-import styles from "../styles/Article.module.css"
 import Link from "next/Link"
+import styles from "../styles/Article.module.css"
 const ArticleItem = ({ article }) => {
   return (
     <Link href="/article/[id]" as={`/article/${article.id}`}>
