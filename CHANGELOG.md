@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/zharrane/NextJs/compare/v0.1.3...v0.1.4) (2021-08-28)
+
+
+### Bug Fixes
+
+* change host to netlify for propre deploy ([39303fa](https://github.com/zharrane/NextJs/commit/39303faba34523d1f37d3374fd268a0edc4b479a))
+
 ### [0.1.3](https://github.com/zharrane/NextJs/compare/v0.1.2...v0.1.3) (2021-08-28)
 
 
