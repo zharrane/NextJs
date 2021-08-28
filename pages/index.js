@@ -1,5 +1,5 @@
-import Meta from "../components/Meta"
 import Article from "../components/Article"
+import Meta from "../components/Meta"
 import { SERVER } from "../config"
 const Home = ({ articles }) => {
   return (
