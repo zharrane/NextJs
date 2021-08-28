@@ -1,5 +1,6 @@
 import Router from "next/router"
 import Meta from "../../../components/Meta"
+import { SERVER } from "../../../config"
 const Article = ({ article }) => {
   //   const router = useRouter()
   //   const { id } = router.query
@@ -18,9 +19,7 @@ const Article = ({ article }) => {
 
 export const getStaticProps = async (context) => {
   let article = {}
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
-  )
+  const res = await fetch(`${SERVER}/api/articles/${context.params.id}`)
   // const res = await fetch(`${SERVER}/api/articles/${context.params.id}`)
   const response = await res.json()
   article = response ? response : {}
@@ -33,7 +32,7 @@ export const getStaticProps = async (context) => {
 
 export const getStaticPaths = async () => {
   let articles = []
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/`)
+  const res = await fetch(`${SERVER}/api/articles`)
   const response = await res.json()
   articles = response ? response : []
   const ids = articles.map((article) => article.id)
